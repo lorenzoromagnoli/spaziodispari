@@ -24,6 +24,11 @@ $text-light-color: {{ site.data.settings.color_settings.text_light_color }};
 
 $accent-color: {{ site.data.settings.color_settings.accent_color }};
 
+$accent-bambini: {{ site.data.settings.color_settings.accent_bambini }};
+$accent-adulti: {{ site.data.settings.color_settings.accent_adulti }};
+$accent-preparto: {{ site.data.settings.color_settings.accent_preparto }};
+
+
 $error-color: {{ site.data.settings.color_settings.error_color }};
 
 

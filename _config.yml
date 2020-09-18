@@ -13,6 +13,9 @@ collections:
   courses:
     output: true
     permalink: /corsi/:slug
+  orari:
+    output: true
+    permalink: /orari/:slug
 
 
 defaults:

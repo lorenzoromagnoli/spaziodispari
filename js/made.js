@@ -470,7 +470,36 @@
 
 	});
 
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Color the tables based on content
 
+	$('.orario-table td').each(function (index) {
+		var str = $(this).text();
+		str = str.replace(/\s+/g, '-').toLowerCase();
+		$(this).addClass(str);
+	});
 
+	$('.orario-table .orario-label').each(function (index) {
+		var str = $(this).text();
+		str = str.replace(/\s+/g, '-').toLowerCase();
+		$(this).addClass(str);
+
+		$(this).hover(()=>{
+			$('.orario-table td').each(function (index) {
+				if ($(this).hasClass(str)){
+					$(this).addClass("highlight");
+				}else{
+					$(this).addClass("hide");
+				}
+			});
+		},()=>{
+			$('.orario-table td').each(function (index) {
+				if ($(this).hasClass(str)){
+					$(this).removeClass("highlight");
+				}else{
+					$(this).removeClass("hide");
+				}
+			});
+		},)
+	});
 
 }(jQuery));

@@ -76,6 +76,9 @@ color_settings:
   accent_color: '#4C60E6'
   border_color: '#ECEDEF'
   error_color: '#D64541'
+  accent_bambini: '#936096'
+  accent_adulti: '#57945E'
+  accent_preparto: '#008898'
 
 font_settings:
   font_embed: '<link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700|Ubuntu+Mono:400,700" rel="stylesheet">'

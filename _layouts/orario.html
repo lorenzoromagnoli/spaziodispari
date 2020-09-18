@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{% if page.accent_color %}
+	{% capture accent_color %}
+		{{ page.accent_color }}
+	{% endcapture %}
+{% endif %}
+
+<div class="page-orario" style="--accent: {{ accent_color }}">
+
+	<section class="orario-table" >
+		<div class="wrap">
+			<div class="post__content {% if page.highlight_first %}highlight-first{% endif %}">
+				{{ page.content }}
+			</div>
+
+			<div class="orario-navigation">
+				{% for corso in page.corsi %}
+					<div class="orario-label">{{corso.nome}}</div>
+				{% endfor %}
+			</div>
+		</div>
+
+
+	</section>
+
+
+</div>
