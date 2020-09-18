@@ -79,12 +79,31 @@
     @extend .button--text;
     color: white;
     background-color: $accent-color;
-    padding: 13px 20px 14px;
+    border-color: $accent-color;
+    padding: 17px 20px 14px;
     border-radius: 40px;
 
     &:hover {
       color: white;
       background-color: darken($color: $accent-color, $amount: 5);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &--outline {
+    @extend .button--text;
+    color: $accent-color;
+    border-style: solid;
+    border-color: $accent-color;
+    padding: 13px 20px 14px;
+    border-radius: 40px;
+    text-decoration: none !important;
+
+    &:hover {
+      background-color: lighten($color: $accent-color, $amount: 35);
     }
 
     &:active {

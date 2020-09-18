@@ -4,12 +4,14 @@ basic_settings:
 
 header_settings:
   logo_image:
-  logo_width: 100
+#  logo_image: /images/sd-logo-big.png
+
+  logo_width: 200
 
 menu_settings:
   menu_items:
     - title: 'Bambini'
-      url: '/bambini'
+      url: '/acquaticità-bambini'
     - title: 'Adulti'
       url: '/adulti'
     - title: 'Palestra'
@@ -173,9 +175,9 @@ font_settings:
     letter_spacing: -0.04
     line_height: 12
   blockquote:
-    small_size: 22
-    medium_size: 30
-    large_size: 38
+    small_size: 16
+    medium_size: 22
+    large_size: 30
     weight: 500
     letter_spacing: -0.02
     line_height: 1.6

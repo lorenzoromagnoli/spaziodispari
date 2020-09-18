@@ -7,7 +7,7 @@
 
 .hero {
 	position: relative;
-	padding: 40px 0 160px;
+	padding: 40px 0 80px;
 
 	.wrap {
 		grid-gap: 0;
@@ -27,12 +27,17 @@
 		max-width: 340px;
 	}
 
-	.hero__cta {
-		position: absolute;
-		left: 0;
-		bottom: -70px;
-	}
 
+	.cta.buttons{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin: 40px -8px;
+
+		a{
+			margin: 0 8px;
+		}
+  }
 	@include mq(tabletp) {
 		padding: 40px 0 180px;
 

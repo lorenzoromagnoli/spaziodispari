@@ -1,0 +1,21 @@
+<section class="about">
+  {% if include.divider == true %}
+    <div class="wrap"><hr/></div>
+    {% endif %}
+  <div class="wrap grid">
+
+    <div class="about__image">
+      <img src="{{ '/images/palestra.jpeg' | relative_url }}" alt="">
+
+      {% include component-socials.html %}
+    </div>
+
+    <div class="about__content">
+      <h5 class="title">Ginnastica Artistica</h2>
+      <p class="subtitle subtitle--light"> Si facciamo anche ginnastica artistica! :)
+      </p>
+
+      <a href="#" class="cta button--outline">Scopri dipiù</a>
+    </div>
+  </div>
+</section>

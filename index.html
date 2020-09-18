@@ -1,8 +1,8 @@
 ---
 layout: default
-overtitle: Made is a Jekyll theme
-title: For designers and web developers
-description: Show off your best work with this beautiful, minimal and customizable portfolio theme.
+overtitle: ""
+title: Acquaticità a Torino dal 1980
+description: Acquaticità per grandi e piccoli, acqua fitness, corsi preparto e ginnastica artistica nel centro di Torino.
 featured_image: /images/social.jpg
 ---
 
@@ -21,57 +21,53 @@ featured_image: /images/social.jpg
 
 			<p class="intro subtitle--light">
 				{{ page.description }}
-				<a href="#" class="hero__cta button--fill contact-trigger js-contact">Get In Touch</a>
+				<span class="cta buttons">
+					<a href="#" class="hero__cta button--fill contact-trigger js-contact">Contattaci</a>
+					<a href="#" class="button--outline"  >Scopri i Corsi</a>
+				</span>
 			</p>
+
 		</div>
 	</section>
 
-	<section class="listing">
-		<div class="wrap">
+	{% include post-components/gallery.html
+		columns = 1
+		full_width = true
+		images = "/images/acquaticità.jpg,/images/demo.jpg,/images/acquaticità.jpg
+		"
+	%}
 
-			{% for project in site.projects reversed %}
-
-			{% if project.accent_color %}{% capture accent_color %}{{ project.accent_color }}{% endcapture %}{% endif %}
-
-			<article class="project__preview">
-				<h3 class="project__title"><a href="{{ project.url | relative_url }}" style="--accent: {{ accent_color }}">{{ project.title }}</a></h3>
-
-				<div class="project__images owl-carousel" style="--accent: {{ accent_color }}">
-					{% for image in project.gallery_images %}
-					<a href="{{ project.url | relative_url }}"><img src="{{ '/images/projects/' | relative_url}}{{ image }}" alt="" class="project__image"></a>
-					{% endfor %}
-				</div>
-
-				<div class="project__content grid" style="border-color: {{ accent_color }}">
-					<p class="project__subtitle subtitle--light">{{ project.subtitle }}</p>
-					<p class="project__description --small">
-						{{ project.description }}
-						<a href="{{ project.url | relative_url }}" class="project__link button--text --right"
-							style="color: {{ accent_color }}; --color-var: {{ accent_color }}">View Case Study</a>
-					</p>
-				</div>
-			</article>
-
-			{% endfor %}
-		</div>
-	</section>
-
-	{% include section__about.html %}
-
-	<section class="recent-posts">
+	<section class="corsi-piscina">
 		<div class="wrap grid">
-			<header class="recent-posts__header">
-				<h4>Recent blog posts</h4>
-				<a href="{{ '/blog' | relative_url }}" class="action button--text--accent --right">All Posts</a>
+			<header class="corsi-piscina__header">
+				<h4>I nostri corsi</h4>
 			</header>
-
-			<div class="recent-posts__list grid">
-				{% for post in site.posts limit: 3 %}
-				{% include component__post-preview.html %}
-				{% endfor %}
-			</div>
-
-			<a href="{{ '/blog' | relative_url }}" class="action-bottom button--text--accent --right">All Posts</a>
+				<div class="grid__3-col">
+					{% include component__card.html
+						url = "https://player.vimeo.com/video/270725085?color=6c6e95&title=0&byline=0"
+						image = "/images/acquaticità.jpg"
+						title= "Per i più piccoli"
+						paragraph= "Corsi di acquaticità per bambini da 0 a 7 anni"
+					%}
+					{% include component__card.html
+						url = "https://player.vimeo.com/video/270725085?color=6c6e95&title=0&byline=0"
+						image = "/images/acquaticità.jpg"
+						title= "Per i più grandi"
+						paragraph= "Corsi di acquaticità e acqua fitness per adulti per acquistare confidenza in acqua e stare in forma"
+						%}
+					{% include component__card.html
+						url = "https://player.vimeo.com/video/270725085?color=6c6e95&title=0&byline=0"
+						image = "/images/acquaticità.jpg"
+						title= "Per chi è in dolce attesa"
+						paragraph= "paragraph"
+						%}
+				</div>
 		</div>
 	</section>
+
+
+	{% include section_home_palestra.html %}
+
+
+
 </div>

@@ -1,0 +1,68 @@
+---
+layout: default
+---
+<div class="page-post">
+	<header class="post__header header--single">
+
+		<div class="wrap">
+			<h1 class="post__title">{{ page.title }}</h1>
+			<h2 class="post__subtitle subtitle--light">{{ page.subtitle }}</h2>
+		</div>
+
+	</header>
+
+	{% include post-components/gallery.html
+		columns = 1
+		full_width = false
+		images = "/images/acquaticità.jpg,/images/demo.jpg,/images/acquaticità.jpg
+		"
+	%}
+
+	<section class="course-section-intro">
+		{% include component__course-intro.html
+			image = page.first-block-image
+			video= page.first-block-video
+			title= page.first-block-title
+			subtitle= page.first-block-subtitle
+			description= page.first-block-description
+			%}
+	</section>
+
+	<section class="post-full collapsed" id="expandable">
+		<div class="wrap">
+			<article class="post__content {% if page.highlight_first %}highlight-first{% endif %}">
+				{{ page.content }}
+			</article>
+		</div>
+	</section>
+
+	<section class="courses-cards">
+		<div class="wrap grid">
+			<header class="recent-posts__header">
+				<h4>I nostri corsi</h4>
+			</header>
+			{% assign total = 0 %}
+  			{% for course in site.courses %}
+     		{% if course.category == page.course-filter %}
+      	{% assign total = total | plus: 1 %}
+     {% endif %}
+  {% endfor %}
+				<div class="recent-posts__list grid__{{ total }}-col">
+
+				{% for course in site.courses %}
+					{% if course.category == page.course-filter %}
+
+					{% include component__card.html
+						url = course.url
+						image = course.featured_image
+						title= course.title
+						paragraph= course.subtitle
+						%}
+					{% endif %}
+				{% endfor %}
+
+				</div>
+		</div>
+	</section>
+
+</div>

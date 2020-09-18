@@ -1,0 +1,22 @@
+
+
+<section class="about">
+  {% if include.divider == true %}
+    <div class="wrap"><hr/></div>
+    {% endif %}
+  <div class="wrap grid">
+
+    <div class="about__content">
+      <h2 class="title">{{ include.title }}</h2>
+      <p class="subtitlesubtitle">{{ include.subtitle }}</p>
+      <p class="description">{{ include.description }}</p>
+      </p>
+
+      <a href="" class="post__link button--text--accent --right reveal-full-post-content">Scopri dipiù</a>
+    </div>
+
+    <div class="about__image">
+      <img src="{{ '/images/acquaticità.jpg' | relative_url }}" alt="">
+    </div>
+  </div>
+</section>

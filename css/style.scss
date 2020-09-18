@@ -165,6 +165,7 @@ $baseurl: '{{ site.baseurl }}';
 @import "_pages/_page__blog";
 @import "_pages/_page__post";
 @import "_pages/_page__project";
+@import "_pages/_page__course";
 
 @import "_includes/_component__header";
 @import "_includes/_component__footer";
@@ -172,7 +173,8 @@ $baseurl: '{{ site.baseurl }}';
 @import "_includes/_syntax";
 @import "_includes/_gallery";
 @import "_includes/_component__contact-form";
-@import "_includes/_component__post-card";
+@import "_includes/_component__card";
+@import "_includes/_component__course-intro";
 @import "_includes/_section__about";
 @import "_includes/_section__recent-posts";
 

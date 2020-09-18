@@ -1,0 +1,11 @@
+.post-full{
+  background-color: $background_alt_color;
+  max-height: 10000px;
+  overflow: hidden;
+
+  @include transition(all 2s ease-in-out !important);
+
+  &.collapsed{
+    max-height: 1px;
+  }
+}

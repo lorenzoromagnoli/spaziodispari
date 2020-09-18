@@ -1,0 +1,9 @@
+<div class="card">
+  <a href="{{ include.url }}" class="card__link">
+    <div class="card__image" style="background-image: url({{ include.image }})">
+    </div>
+    <time class="card__date label--small">{{ post.date | date: "%B %d, %Y" }}</time>
+    <h5 class="card__title">{{ include.title }}</h5>
+    <p>{{ include.paragraph }}</p>
+  </a>
+</div>
