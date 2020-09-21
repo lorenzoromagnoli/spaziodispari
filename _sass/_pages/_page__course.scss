@@ -7,20 +7,29 @@
 
   &.collapsed{
     max-height: 1px;
+    padding: 0px;
   }
 }
 
 .orario-table{
 
-
+  h4{
+    margin-top: 20px;
+  }
 
   .orario-navigation{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 40px 0px;
+    display: none;
+
+
+    @include mq(tabletl) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 40px 0px;
+    }
 
     .orario-label{
+
       margin: 0 10px;
       padding: 5px 10px;
       border-radius: 50px;
@@ -42,6 +51,11 @@
       padding-bottom: 16px;
     }
     td{
+      display: table-cell;
+      width: 40px;
+      overflow: hidden;
+
+
       border-bottom: 1px solid $background_alt_color;
       @include transition(all .6s ease-in-out );
 
@@ -49,39 +63,113 @@
       }
       &.hide{
         background-color: #fff !important;
-        color: $text_medium_color;
+        color: $text_medium_color !important;
+
       }
     }
   }
 
-  .orario-label, td{
-    &.acquaticità-0-1{
-      background-color: darken($color: $accent_bambini, $amount: 20);
-      color: #fff;
+  @media only screen and (max-width: 1023px) {
+    td.filled{
+      color: transparent !important;
+      border-radius: 40px;
+      font-size: 1px;
+
     }
-    &.acquaticità-1-2{
+    th{
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0px 12px;
+    }
+
+    table{
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0px;
+    }
+
+    td{
+      border:none;
+      height: 40px;
+
+      box-sizing: border-box;
+      border-bottom: 0px !important;
+    }
+
+    tr{
+      border: 1px solid $background-alt-color;
+    }
+  }
+
+  .orario-label, td{
+    text-align: center;
+
+    &.acquaticità{
+
+    &.group_0-1{
+      background-color: darken($color: $accent_bambini, $amount: 20);
+        color: #fff ;
+    }
+    &.group_1-2{
       background-color: darken($color: $accent_bambini, $amount: 10);
       color: #fff;
     }
-    &.acquaticità-0-2{
+    &.group_0-2{
       background-color: lighten($color: $accent_bambini, $amount: 0);
       color: #fff;
     }
-    &.acquaticità-1-3{
+    &.group_1-3{
       background-color: lighten($color: $accent_bambini, $amount: 10);
       color: #fff;
     }
-    &.acquaticità-2-3{
+    &.group_2-3{
       background-color: lighten($color: $accent_bambini, $amount: 20);
       color: #fff;
     }
-    &.acquaticità-3-4{
+    &.group_3-4{
       background-color: lighten($color: $accent_bambini, $amount: 30);
       color: darken($color: $accent_bambini, $amount: 20);
     }
-    &.acquaticità-2-4{
+    &.group_2-4{
       background-color: lighten($color: $accent_bambini, $amount: 40);
       color: darken($color: $accent_bambini, $amount: 20);
     }
   }
+  }
+}
+
+table.desktop{
+  display: none;
+}
+
+table.mobile{
+  display: table;
+}
+
+.desktop{
+  display: none;
+}
+.mobile{
+  display: block;
+}
+
+@include mq(tabletl) {
+  table.desktop{
+    display: table !important;
+  }
+  table.mobile{
+    display: none !important;
+  }
+  .desktop{
+    display: block;
+  }
+  .mobile{
+    display: none;
+  }
+}
+
+section{
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

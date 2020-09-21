@@ -10,7 +10,6 @@
 	'use strict';
 
 
-
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Navigation
 
 	// Global vars
@@ -114,9 +113,7 @@
 				// Switch the URL via History
 				History.pushState(null, docTitle, thisTarget);
 			}
-
 		});
-
 	}
 
 
@@ -158,10 +155,52 @@
 
 
 
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Color the tables based on content
+function colorCalendar() {
+
+		$('.orario-table td').each(function (index) {
+			var str = $(this).text();
+			str = str.replace(/\s+/g, ' group_').toLowerCase();
+
+			if (str!="" && !str[0].match(/^([0-9])$/)){
+				$(this).addClass("filled "+ str);
+			}
+
+		});
+
+		$('.orario-table .orario-label').each(function (index) {
+			var str = $(this).text();
+			str = str.replace(/\s+/g, ' group_').toLowerCase();
+			$(this).addClass(str);
+
+			$(this).hover(()=>{
+				$('.orario-table td').each(function (index) {
+					if ($(this).hasClass(str)){
+						$(this).addClass("highlight");
+					}else{
+						$(this).addClass("hide");
+					}
+				});
+			},()=>{
+				$('.orario-table td').each(function (index) {
+					if ($(this).hasClass(str)){
+						$(this).removeClass("highlight");
+					}else{
+						$(this).removeClass("hide");
+					}
+				});
+			},)
+		});
+	}
+
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Page load
 
 	function pageFunctions() {
+		console.log("pagefunction");
 
+		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Color the calendar
+
+		colorCalendar();
 
 		// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Show content
 
@@ -470,36 +509,5 @@
 
 	});
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Color the tables based on content
-
-	$('.orario-table td').each(function (index) {
-		var str = $(this).text();
-		str = str.replace(/\s+/g, '-').toLowerCase();
-		$(this).addClass(str);
-	});
-
-	$('.orario-table .orario-label').each(function (index) {
-		var str = $(this).text();
-		str = str.replace(/\s+/g, '-').toLowerCase();
-		$(this).addClass(str);
-
-		$(this).hover(()=>{
-			$('.orario-table td').each(function (index) {
-				if ($(this).hasClass(str)){
-					$(this).addClass("highlight");
-				}else{
-					$(this).addClass("hide");
-				}
-			});
-		},()=>{
-			$('.orario-table td').each(function (index) {
-				if ($(this).hasClass(str)){
-					$(this).removeClass("highlight");
-				}else{
-					$(this).removeClass("hide");
-				}
-			});
-		},)
-	});
 
 }(jQuery));

@@ -1,6 +1,6 @@
 ---
-title: Orario Acquaticità 0-4
-for_course: acquaticità_0-4
+title: Orario Acqua Gym Dolce
+for_course: acqua_gym_dolce
 layout: orario
 corsi:
   - nome: Acquaticità 0-1

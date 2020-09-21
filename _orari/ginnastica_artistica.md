@@ -1,6 +1,6 @@
 ---
-title: Orario Acquaticità 0-4
-for_course: acquaticità_0-4
+title: Orario Ginnastica Artistica
+for_course: ginnastica_artistica
 layout: orario
 corsi:
   - nome: Acquaticità 0-1

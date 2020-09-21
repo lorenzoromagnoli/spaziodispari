@@ -26,6 +26,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+	&__4-col {
+    @extend .grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   &__3-col {
     @extend .grid;
     grid-template-columns: repeat(3, 1fr);

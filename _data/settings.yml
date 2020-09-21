@@ -15,9 +15,9 @@ menu_settings:
     - title: 'Adulti'
       url: '/adulti'
     - title: 'Palestra'
-      url: '/palestra'
+      url: '/corsi/ginnastica-artistica.html'
     - title: 'Preparto'
-      url: '/preparto'
+      url: '/corsi/future-mamme'
     - title: 'Associazione'
       url: '/associazione'
 
@@ -88,7 +88,7 @@ font_settings:
   bold_weight: 700
   site_title:
     small_size: 30
-    medium_size: 40
+    medium_size: 35
     large_size: 45
     weight: 700
     letter_spacing: -0.02

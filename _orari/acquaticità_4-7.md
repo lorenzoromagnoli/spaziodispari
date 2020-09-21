@@ -1,6 +1,6 @@
 ---
-title: Orario Acquaticità 0-4
-for_course: acquaticità_0-4
+title: Orario Acquaticità 4-7
+for_course: acquaticità_4-7
 layout: orario
 corsi:
   - nome: Acquaticità 0-1

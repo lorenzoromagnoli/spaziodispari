@@ -30,11 +30,33 @@ layout: default
 
 	<section class="post-full collapsed" id="expandable">
 		<div class="wrap">
-			<article class="post__content {% if page.highlight_first %}highlight-first{% endif %}">
+			<div class="post__content {% if page.highlight_first %}highlight-first{% endif %}">
 				{{ page.content }}
-			</article>
+			</div>
 		</div>
 	</section>
+
+		{% for orario in site.orari %}
+
+			{% if orario.for_course == page.course_filter %}
+
+			{% include component__course-timetable.html
+				title = orario.title
+				tags= orario.corsi
+				content = orario.content
+				corsi=orario.corsi
+				%}
+			{% endif %}
+		{% endfor %}
+
+		{% include component__course-regolamento.html
+			img=page.regolamento-img
+			title="Regolamento"
+			subtitle=page.regolamento-subtitle
+			regole=page.regolamento-regole
+			%}
+
+		{% include component__course-iscrizioni.html %}
 
 
 </div>

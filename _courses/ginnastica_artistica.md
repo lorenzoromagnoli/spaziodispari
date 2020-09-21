@@ -1,5 +1,5 @@
 ---
-title: Acquaticità 0-4
+title: Ginnastica Artistica
 subtitle: High-fidelity mobile app designs for a super awesome social media company.
 description: This is a demo post that shows what you can do inside portfolio and blog posts. We’ve included everything you need to create engaging posts and case studies to show off your work in a beautiful way.
 featured_image: /images/acquaticità.jpg
@@ -8,7 +8,7 @@ gallery_images:
   - demo.jpg
   - demo.jpg
   - demo.jpg
-category: acquaticità-bambini
+category: adulti
 
 layout: course
 
@@ -18,7 +18,7 @@ first-block-subtitle: Giocare nell’acqua “amica”, un modo diverso per star
 first-block-description: Non si tratta di imparare a nuotare, poiché i piccoli non hanno la maturità necessaria per apprendere le dinamiche dei gesti natatori, ma di permettere al bambino, con un aiuto stimolante ed attento, di acquisire una certa autonomia nell’acqua, possibile ad ogni età.
 first-block-video:
 first-block-image:
-course_filter: acquaticità_0-4
+course_filter: ginnastica_artistica
 
 regolamento-img: /images/acquaticità.jpg
 regolamento-subtitle: Queste sono le regole da rispettare

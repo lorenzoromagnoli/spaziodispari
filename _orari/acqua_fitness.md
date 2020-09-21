@@ -1,6 +1,6 @@
 ---
-title: Orario Acquaticità 0-4
-for_course: acquaticità_0-4
+title: Orario Acqua Fitness
+for_course: acqua_fitness
 layout: orario
 corsi:
   - nome: Acquaticità 0-1

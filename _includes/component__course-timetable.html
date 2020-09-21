@@ -1,0 +1,15 @@
+<section class="orario-table" >
+  <div class="wrap">
+    <div class=" {% if page.highlight_first %}highlight-first{% endif %}">
+      <h2 class="title">{{ include.title }}</h2>
+      <p class="subtitle">{{ include.subtitle }}</p>
+      {{ include.content | markdownify }}
+    </div>
+
+    <div class="orario-navigation">
+      {% for corso in include.corsi %}
+        <div class="orario-label">{{corso.nome}}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

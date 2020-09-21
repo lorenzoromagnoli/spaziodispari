@@ -1,0 +1,26 @@
+<section class="about regolamento">
+  {% if include.divider == true %}
+    <div class="wrap"><hr/></div>
+    {% endif %}
+  <div class="wrap grid">
+
+    <div class="about__content">
+      <h5 class="title">
+        {{include.title}}
+      </h5>
+      <p class="subtitle subtitle--light">
+        {{include.subtitle}}
+      </p>
+
+      <ul>
+      {% for regola in include.regole %}
+      <li>{{regola}}</li>
+      {% endfor %}
+    </ul>
+    </div>
+
+    <div class="about__image">
+      <img src="{{ include.img | relative_url }}" alt="">
+    </div>
+  </div>
+</section>

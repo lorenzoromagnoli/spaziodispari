@@ -1,6 +1,6 @@
 ---
-title: Orario Acquaticità 0-4
-for_course: acquaticità_0-4
+title: Orario Future Mamme
+for_course: future_mamme
 layout: orario
 corsi:
   - nome: Acquaticità 0-1
