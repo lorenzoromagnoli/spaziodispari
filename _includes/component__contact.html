@@ -12,18 +12,18 @@
 
       <form method="POST" name="contact" class="contact__form" data-netlify="true" action="/thanks">
         <div class="input-group">
-          <label for="name">Your Name</label>
-          <input type="text" name="name" id="name" placeholder="What should I call you?" />
+          <label for="name">Nome</label>
+          <input type="text" name="name" id="name" placeholder="Come possiamo chiamarti?" />
         </div>
 
         <div class="input-group">
-          <label for="email">Your Email</label>
-          <input type="email" name="email" id="email" placeholder="What's your email address?" />
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Qual'è il tuo indirizzo email?" />
         </div>
 
         <div class="input-group">
-          <label for="message">Your Message</label>
-          <textarea name="message" id="message" placeholder="What’s on your mind?" rows="4"></textarea>
+          <label for="message">Messaggio</label>
+          <textarea name="message" id="message" placeholder="Cosa ti interessa sapere?" rows="4"></textarea>
         </div>
 
         <input type="hidden" name="_next" value="{{ site.data.settings.contact_settings.confirmation_url }}" />
