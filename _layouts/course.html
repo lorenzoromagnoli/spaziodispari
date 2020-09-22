@@ -49,12 +49,14 @@ layout: default
 			{% endif %}
 		{% endfor %}
 
+		{% if page.category != "ginnastica" %}
 		{% include component__course-regolamento.html
 			img=page.regolamento-img
 			title="Regolamento"
 			subtitle=page.regolamento-subtitle
 			regole=page.regolamento-regole
 			%}
+			{% endif %}
 
 
 		{% include component__course-iscrizioni.html %}
