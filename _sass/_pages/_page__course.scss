@@ -1,178 +1,197 @@
-.post-full{
+.post-full {
   max-height: 10000px;
   overflow: hidden;
-
   @include transition(all 2s ease-in-out !important);
 
-  &.collapsed{
+  &.collapsed {
     max-height: 1px;
-    padding: 0px;
+    padding: 0;
   }
 }
 
-#expandable{
+#expandable {
   background-color: $background-alt-color;
 }
 
-.orario-table{
-
-  h4{
+.orario-table {
+  h4 {
     margin-top: 20px;
   }
 
-  .orario-navigation{
+  .orario-navigation {
     display: none;
-
-
     @include mq(tabletl) {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      margin: 40px 0px;
+      margin: 40px 0;
     }
 
-    .orario-label{
-
+    .orario-label {
       margin: 0 10px;
       padding: 5px 10px;
       border-radius: 50px;
       cursor: pointer;
-      @include transition(margin .5s ease-in-out );
+      @include transition(margin 0.5s ease-in-out);
 
-      &:hover{
-        margin: -5px 10px 5px 10px;
+      &:hover {
+        margin: -5px 10px 5px;
       }
     }
   }
 
-
-  table{
+  table {
     width: 100%;
     margin-top: 40px;
 
-    th{
+    th {
       padding-bottom: 16px;
     }
-    td{
+
+    td {
       display: table-cell;
       width: 40px;
       overflow: hidden;
-
-
       border-bottom: 1px solid $background_alt_color;
-      @include transition(all .6s ease-in-out );
+      @include transition(all 0.6s ease-in-out);
 
-      &.highlight{
-      }
-      &.hide{
+      &.highlight {}
+
+      &.hide {
         background-color: #fff !important;
         color: $text_medium_color !important;
-
       }
     }
   }
-
   @media only screen and (max-width: 1023px) {
-    td.filled{
+    td.filled {
       color: transparent !important;
       border-radius: 40px;
       font-size: 1px;
-
     }
-    th{
+
+    th {
       white-space: nowrap;
       overflow: hidden;
-      padding: 0px 12px;
+      padding: 0 12px;
     }
 
-    table{
+    table {
       table-layout: fixed;
       width: 100%;
       border-collapse: separate;
-      border-spacing: 0px;
+      border-spacing: 0;
     }
 
-    td{
-      border:none;
+    td {
+      border: none;
       height: 40px;
-
       box-sizing: border-box;
-      border-bottom: 0px !important;
+      border-bottom: 0 !important;
     }
 
-    tr{
+    tr {
       border: 1px solid $background-alt-color;
     }
   }
 
-  .orario-label, td{
+  .orario-label,
+  td {
     text-align: center;
 
-    &.acquaticità{
+    &.acquaticità.group_adulti{
+      background-color:$accent_adulti;
+      color: #fff;
+    }
 
-    &.group_0-1{
-      background-color: darken($color: $accent_bambini, $amount: 20);
-        color: #fff ;
-    }
-    &.group_1-2{
-      background-color: darken($color: $accent_bambini, $amount: 10);
+    &.acqua.group_gym.group_dolce{
+      background-color:$accent_adulti;
       color: #fff;
     }
-    &.group_0-2{
-      background-color: lighten($color: $accent_bambini, $amount: 0);
+
+    &.acqua.group_fitness{
+      background-color:$accent_adulti;
       color: #fff;
     }
-    &.group_1-3{
-      background-color: lighten($color: $accent_bambini, $amount: 10);
+
+    &.group_mamme{
+      background-color:$accent_preparto;
       color: #fff;
     }
-    &.group_2-3{
-      background-color: lighten($color: $accent_bambini, $amount: 20);
-      color: #fff;
+
+    &.acquaticità {
+      &.group_0-1, &.group_4-5 {
+        background-color: darken($color: $accent_bambini, $amount: 20);
+        color: #fff;
+      }
+
+      &.group_1-2 {
+        background-color: darken($color: $accent_bambini, $amount: 10);
+        color: #fff;
+      }
+
+      &.group_0-2, &.group_5-7{
+        background-color: lighten($color: $accent_bambini, $amount: 0);
+        color: #fff;
+      }
+
+      &.group_1-3 {
+        background-color: lighten($color: $accent_bambini, $amount: 10);
+        color: #fff;
+      }
+
+      &.group_2-3, &.group_4-7{
+        background-color: lighten($color: $accent_bambini, $amount: 20);
+        color: #fff;
+      }
+
+      &.group_3-4 {
+        background-color: lighten($color: $accent_bambini, $amount: 30);
+        color: darken($color: $accent_bambini, $amount: 20);
+      }
+
+      &.group_2-4 {
+        background-color: lighten($color: $accent_bambini, $amount: 40);
+        color: darken($color: $accent_bambini, $amount: 20);
+      }
     }
-    &.group_3-4{
-      background-color: lighten($color: $accent_bambini, $amount: 30);
-      color: darken($color: $accent_bambini, $amount: 20);
-    }
-    &.group_2-4{
-      background-color: lighten($color: $accent_bambini, $amount: 40);
-      color: darken($color: $accent_bambini, $amount: 20);
-    }
-  }
   }
 }
 
-table.desktop{
+table.desktop {
   display: none;
 }
 
-table.mobile{
+table.mobile {
   display: table;
 }
 
-.desktop{
+.desktop {
   display: none;
 }
-.mobile{
+
+.mobile {
   display: block;
 }
-
 @include mq(tabletl) {
-  table.desktop{
+  table.desktop {
     display: table !important;
   }
-  table.mobile{
+
+  table.mobile {
     display: none !important;
   }
-  .desktop{
+
+  .desktop {
     display: block;
   }
-  .mobile{
+
+  .mobile {
     display: none;
   }
 }
 
-section{
+section {
   padding-top: 40px;
   padding-bottom: 40px;
 }
