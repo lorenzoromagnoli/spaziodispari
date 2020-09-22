@@ -8,7 +8,7 @@ gallery_images:
   - demo.jpg
   - demo.jpg
   - demo.jpg
-category: adulti
+category: ginnastica
 
 layout: course
 

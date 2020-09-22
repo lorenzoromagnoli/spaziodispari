@@ -4,13 +4,13 @@
   <div class="wrap">
     <div class="contact__wrap">
       <header class="contact__header">
-        <h2 class="title">Get In Touch</h2>
-        <p class="subtitle--light">Prefer using email? Say hi at <a
+        <h2 class="title">Contattaci</h2>
+        <p class="subtitle--light">Preferisci usare la tua casella di posta elettronica? scrivici a <a
             href="mailto: {{ site.data.settings.contact_settings.email_address }}">{{ site.data.settings.contact_settings.email_address }}</a>
         </p>
       </header>
 
-      <form method="POST" action="{{ site.data.settings.contact_settings.form_action }}" class="contact__form">
+      <form method="POST" name="contact" class="contact__form" data-netlify="true" action="/thanks">
         <div class="input-group">
           <label for="name">Your Name</label>
           <input type="text" name="name" id="name" placeholder="What should I call you?" />

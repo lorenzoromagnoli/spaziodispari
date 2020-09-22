@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="page-post">
+
+	<div class="page-post">
+		<header class="post__header header--single">
+
+			<div class="wrap">
+				<h1 class="post__title">{{ page.title }}</h1>
+				<h2 class="post__subtitle subtitle--light">{{ page.subtitle }}</h2>
+				<br>
+				<a href= "/storia" class="post__link button--text--accent --right">Scopri la storia dell'associazione</a>
+			</div>
+
+		</header>
+
+		{% include post-components/gallery.html
+			columns = 1
+			full_width = false
+			images = "/images/acquaticità.jpg,/images/demo.jpg,/images/acquaticità.jpg
+			"
+		%}
+
+	<section class="spazi">
+		<div class="wrap">
+			<h3> Gli spazi</h3>
+		</div>
+
+		{% include component__spazi-piscina.html
+			img=page.spazi.piscina.img
+			title=page.spazi.piscina.title
+			paragraph=page.spazi.piscina.paragrafo
+			cta=page.spazi.piscina.button
+		%}
+
+		{% include component__spazi-palestra.html
+			img=page.spazi.palestra.img
+			title=page.spazi.palestra.title
+			paragraph=page.spazi.palestra.paragrafo
+			cta=page.spazi.palestra.button
+		%}
+	</section>
+
+	{% include component__contatti.html
+		content=content
+	%}
+
+	<section class="team">
+		<div class="wrap">
+			<h3> Il nostro team</h3>
+		</div>
+		{% include component__staff-gallery.html
+			people=page.staff
+		%}
+	</section>
+
+
+
+
+
+</div>

@@ -1,0 +1,23 @@
+<section class="staff-gallery">
+  <div class="wrap grid">
+    <div class="grid__4-col">
+    {% for person in include.people %}
+      <div class="team-card">
+
+        <div class="team-photo">
+          <img src="{{ person.img }}" alt=""></img>
+        </div>
+
+        <h5 class="name">
+          {{person.nome}}
+        </h5>
+
+        <div class="role">
+          {{person.ruolo}}
+        </div>
+
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+.staff-gallery{
+  .grid{
+    .grid__4-col{
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+
+  .team-card{
+    text-align: center;
+    .name{
+      font-weight: bold;
+      font-variant-caps: titling-caps;
+    }
+    .team-photo{
+      width: 100%;
+      display: inline-block;
+
+      img{
+        width: 100%;
+        object-fit: cover;
+        border-radius: 300px;
+      }
+    }
+  }
+}
+
+.contatti{
+  background-color: $background_alt-color
+}

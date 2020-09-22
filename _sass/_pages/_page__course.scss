@@ -1,5 +1,4 @@
 .post-full{
-  background-color: $background_alt_color;
   max-height: 10000px;
   overflow: hidden;
 
@@ -9,6 +8,10 @@
     max-height: 1px;
     padding: 0px;
   }
+}
+
+#expandable{
+  background-color: $background-alt-color;
 }
 
 .orario-table{

@@ -24,7 +24,7 @@ menu_settings:
 footer_settings:
   logo_image:
   logo_width: 100
-  tagline: A beautiful, minimal portfolio Jekyll theme
+  tagline: Acquaticità a Torino dal 1980
 
 hero_settings:
   background_image: /images/backgrounds/background-hero.svg
@@ -33,16 +33,16 @@ post_settings:
   grid_spacing: 10
 
 contact_settings:
-  email_address: ''
+  email_address: 'spaziodispari.gmail.com'
   form_action: 'https://formspree.io/hello@jekyllthemes.io'
   confirmation_url: '/thanks'
   email_subject: 'Contact form submission'
   send_button_text: 'Contattaci'
 
 social_settings:
-  facebook_url: ''
+  facebook_url: 'https://www.facebook.com/spaziodispari'
   twitter_url: ''
-  instagram_url: ''
+  instagram_url: 'https://www.instagram.com/spaziodispari/'
   snapchat_url: ''
   youtube_url: ''
   google-plus_url: ''
@@ -59,7 +59,7 @@ social_settings:
   deviantart_url: ''
   github_url: ''
   reddit_url: ''
-  flickr_url: ''
+  flickr_url: 'https://www.flickr.com/photos/spaziodispari/'
   etsy_url: ''
   kickstarter_url: ''
   soundcloud_url: ''
